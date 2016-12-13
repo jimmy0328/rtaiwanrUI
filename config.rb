@@ -5,9 +5,6 @@
 # Per-page layout changes:
 #
 # With no layout
-with_layout :email do
-  page "/email/*"
-end
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -44,12 +41,6 @@ set :images_dir, 'img'
 
 # Build-specific configuration
 configure :build do
-end
-
-activate :livereload
-
-activate :deploy do |deploy|
-  deploy.build_before = true # default: false
 end
 
 set :relative_links, true
