@@ -5,9 +5,9 @@
 # Per-page layout changes:
 #
 # With no layout
-page '/*.xml', layout: false
-page '/*.json', layout: false
-page '/*.txt', layout: false
+with_layout :email do
+  page "/email/*"
+end
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -34,11 +34,31 @@ end
 #   end
 # end
 
+Encoding.default_external = "utf-8"
+
+set :css_dir, 'sass'
+
+set :js_dir, 'js'
+
+set :images_dir, 'img'
+
 # Build-specific configuration
 configure :build do
-  # Minify CSS on build
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
 end
+
+activate :livereload
+
+activate :deploy do |deploy|
+  deploy.build_before = true # default: false
+end
+
+set :relative_links, true
+
+ignore 'img/icons*'
+ignore 'bower_components/*'
+ignore 'node_modules/*'
+ignore 'gulpfile.js'
+ignore 'gulpfile.js.example'
+ignore 'bower.json'
+ignore 'package.json'
+
