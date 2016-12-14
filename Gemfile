@@ -13,4 +13,5 @@ gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 
 gem "jquery-middleman"
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'middleman-sprockets'
+gem 'bootstrap-sass', '~> 3.3.6'
