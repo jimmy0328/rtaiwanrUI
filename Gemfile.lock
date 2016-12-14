@@ -113,7 +113,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap (~> 4.0.0.alpha3)
+  bootstrap
   jquery-middleman
   middleman (>= 4.0.0)
   middleman-livereload
