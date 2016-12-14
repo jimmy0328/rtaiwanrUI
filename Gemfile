@@ -13,4 +13,4 @@ gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 
 gem "jquery-middleman"
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap'
